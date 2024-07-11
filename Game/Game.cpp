@@ -79,7 +79,6 @@ void init()
 
 void drawBoard()
 {
-    std::system("cls");
 
     for (int w{0}; w < width + 2; w++)
     {
@@ -226,6 +225,7 @@ int main()
     drawBoard();
     while (!gameOver)
     {
+        std::cout << "\033[2J\033[1;1H";
         drawBoard();
         input();
         updateSnek();
